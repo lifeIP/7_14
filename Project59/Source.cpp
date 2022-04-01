@@ -31,8 +31,8 @@ int main()
 }
 void convert(float y, float z, char* str)
 {
-	double x = y + 3 * exp(z);
-	sprintf(str, "%05.5f = %05.5f + 3*exp(%05.5f)", x, y, z);
+	double x = pow(y,-2*z);
+	sprintf(str, "%7f = %7f^(-2*%7f)", x, y,z);
 }
 
 void findANDreplace(char* str_l, char* resault_l) {
@@ -67,7 +67,6 @@ void findANDreplace(char* str_l, char* resault_l) {
 		strncpy(strlen(str1) + str1, start+str_l, size_word);
 		strcat(str1, str2);
 	}
-	cout << str1 << endl;
 	for (int i = 0; i < strlen(str1); i++) {
 		resault_l[i] = str1[i];
 	}
